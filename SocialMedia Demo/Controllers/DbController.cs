@@ -25,7 +25,7 @@ public static class  DbController
             {
                 Conn.Open();
             }
-            string query = $"SELECT UserName,Id FROM Users Where Id !={id}";
+            string query = $"SELECT UserName,Id,ProfilePhoto FROM Users Where Id !={id}";
 
             MySqlCommand command = new MySqlCommand(query, Conn);
             MySqlDataReader dataReader = command.ExecuteReader();
@@ -33,6 +33,7 @@ public static class  DbController
             {
                 string name = (string)dataReader[0];
                 int personId = (int)dataReader[1];
+                string profilePhoto = (string)dataReader[2];
                 PersonStatus status;
                 try
                 {
@@ -46,7 +47,7 @@ public static class  DbController
                 {
                     Name = name,
                     PersonId = personId,
-                    Profile_Photo = "img.png",
+                    Profile_Photo = profilePhoto,
                     Status = status
                 });
             }
@@ -79,11 +80,10 @@ public static class  DbController
                 Conn.Open();
             }
 
-            string query = $"SELECT Users.Id,Users.UserName,Friendship.Status From Users " +
+            string query = $"SELECT Users.Id,Users.UserName,Users.ProfilePhoto,Friendship.Status From Users " +
                            $"INNER JOIN Friendship ON Friendship.FriendId=Users.Id WHERE Friendship.UserId={id} " +
-                           $"UNION Select Users.Id,Users.UserName,Friendship.Status From Users " +
+                           $"UNION Select Users.Id,Users.UserName,Users.ProfilePhoto,Friendship.Status From Users " +
                            $"INNER JOIN Friendship ON Friendship.UserId=Users.Id WHERE Friendship.FriendId={id}";
-            //                                                                                      Friendship ON Friendship.FriendId=Users.Id WHERE Friendship.UserId=3 OR  Friendship.FriendId=3;
 
             MySqlCommand command = new MySqlCommand(query, Conn);
             MySqlDataReader dataReader = command.ExecuteReader();
@@ -93,8 +93,8 @@ public static class  DbController
                 {
                     PersonId = (int)dataReader[0],
                     Name = (string)dataReader[1],
-                    Profile_Photo = "img.png",
-                    Status = (PersonStatus)dataReader[2]
+                    Profile_Photo = (string)dataReader[2],
+                    Status = (PersonStatus)dataReader[3]
                 });
             }
         }
@@ -124,7 +124,7 @@ public static class  DbController
                 Conn.Open();
             }
 
-            string query = $"SELECT Users.Id,Users.UserName,Friendship.Status From Users INNER JOIN Friendship ON Friendship.UserId=Users.Id WHERE Friendship.FriendId={id};";
+            string query = $"SELECT Users.Id,Users.UserName,Users.ProfilePhoto,Friendship.Status From Users INNER JOIN Friendship ON Friendship.UserId=Users.Id WHERE Friendship.FriendId={id};";
 
             MySqlCommand command = new MySqlCommand(query, Conn);
             MySqlDataReader dataReader = command.ExecuteReader();
@@ -134,8 +134,8 @@ public static class  DbController
                 {
                     PersonId = (int)dataReader[0],
                     Name = (string)dataReader[1],
-                    Profile_Photo = "img.png",
-                    Status = (PersonStatus)dataReader[2]
+                    Profile_Photo = (string)dataReader[2],
+                    Status = (PersonStatus)dataReader[3]
                 });
             }
         }
@@ -163,17 +163,27 @@ public static class  DbController
             string hashed = HashPass(user.Password);
             try
             {
+                string profilePhoto;
+                if (user.ProfilePhoto != null)
+                {
+                    IFormFile[] arr = {user.ProfilePhoto};
+                    profilePhoto = FileManager.SaveFiles(arr, ImageType.Profile)[0];
+                }
+                else
+                {
+                    profilePhoto = "default.png";
+                }
+                
                 if (Conn.State != ConnectionState.Open)
                 {
                     Conn.Open();
                 }
 
                 string query =
-                    $"INSERT INTO Users (UserName,Email,Password) VALUES('{user.UserName}','{user.Email}','{hashed}')";
-
+                    $"INSERT INTO Users (UserName,Email,Password,ProfilePhoto) VALUES('{user.UserName}','{user.Email}','{hashed}','{profilePhoto}')";
                 MySqlCommand command = new MySqlCommand(query, Conn);
-
                 result = command.ExecuteNonQuery();
+
             }
             catch (MySqlException e)
             {

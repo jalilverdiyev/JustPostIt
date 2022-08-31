@@ -13,7 +13,7 @@
             {
                 <div class="person p-2 border d-flex flex-row">
                     <div class="container d-flex flex-row">
-                        <img class="profilePhoto" id="@person.PersonId" src="/images/user.png" width="35px" height="35px" alt="">
+                        <img class="profilePhoto" id="@person.PersonId" src="~/images/profilePhotos/@person.Profile_Photo" width="35px" height="35px" alt="">
                         <h4 id="userName">@person.Name</h4>
                     </div>
                     @switch (person.Status)

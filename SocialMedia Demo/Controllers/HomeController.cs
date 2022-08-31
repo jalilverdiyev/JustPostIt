@@ -18,20 +18,20 @@ public class HomeController : Controller
 
     public IActionResult People()
     {
-        List<Person> people = DbController.GetUsers(1);
+        List<Person> people = DbController.GetUsers(2);
         
         return View(people);
     }
 
     public IActionResult Friends()
     {
-        var list = DbController.GetFriends(1).FindAll(friend => friend.Status == PersonStatus.Accepted);
+        var list = DbController.GetFriends(2).FindAll(friend => friend.Status == PersonStatus.Accepted);
         return View(list);
     }
 
     public IActionResult FriendRequests()
     {
-        var friends = DbController.GetFriendRequests(1).FindAll(friend => friend.Status == PersonStatus.Pending);
+        var friends = DbController.GetFriendRequests(2).FindAll(friend => friend.Status == PersonStatus.Pending);
         return View(friends);
     }
     

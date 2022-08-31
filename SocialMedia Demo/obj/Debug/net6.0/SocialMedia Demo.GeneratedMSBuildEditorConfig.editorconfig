@@ -23,6 +23,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aGVudGljYXRpb24vUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/Views/Authentication/Test.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aGVudGljYXRpb24vVGVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/Views/Home/AddFriend.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BZGRGcmllbmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
