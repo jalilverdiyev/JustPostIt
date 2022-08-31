@@ -1,0 +1,28 @@
+@{
+    Layout = "_Layout";
+}
+@model List<Person>
+
+<div class="container">
+<div class="popup" id="popup"></div>
+    <div class="container d-flex flex-row flex-wrap cont">
+        @foreach (var request in @Model)
+        {
+            <div class=" d-flex justify-content-center align-items-center conta">
+                <div class="card">
+                    <div class="user text-center">
+                        <div class="profile mt-3">
+                            <img alt="" src="/images/user.png" class="rounded-circle" width="80">
+                        </div>
+                    </div>
+                    <div class="mt-5 text-center">
+                        <h4 class="mb-0">@request.Name</h4>
+                        <button class="btn btn-primary btn-sm p-2" onclick="updateFriend(@request.PersonId,'@request.Name','@Url.Action("UpdateFriend")','accept')">Accept</button>
+                        <button class="btn btn-danger btn-sm p-2" onclick="updateFriend(@request.PersonId,'@request.Name','@Url.Action("UpdateFriend")','reject')">Reject</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+</div>

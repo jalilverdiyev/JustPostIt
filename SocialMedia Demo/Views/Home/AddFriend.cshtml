@@ -1,0 +1,14 @@
+@if (ViewBag.added)
+{
+    <div class="alert alert-success d-flex justify-content-between">
+        Added succesfully
+        <span class="hide-alert" onclick="hidealert()" style="cursor: pointer">x</span>
+    </div>
+}
+else
+{
+    <div class="alert alert-warning d-flex justify-content-between">
+        This person is already your friend
+        <span class="hide-alert" onclick="hidealert()" style="cursor: pointer">x</span>
+    </div>
+}

@@ -1,0 +1,64 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SocialMedia_Demo
+build_property.RootNamespace = SocialMedia_Demo
+build_property.ProjectDir = /home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo
+build_property._RazorSourceGeneratorDebug = 
+
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/Views/Authentication/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aGVudGljYXRpb24vTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/Views/Authentication/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aGVudGljYXRpb24vUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/Views/Home/AddFriend.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BZGRGcmllbmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/Views/Home/FriendRequests.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9GcmllbmRSZXF1ZXN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/Views/Home/Friends.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9GcmllbmRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/Views/Home/FriendsPosts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9GcmllbmRzUG9zdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/Views/Home/People.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9QZW9wbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/Views/Home/UpdateFriend.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9VcGRhdGVGcmllbmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

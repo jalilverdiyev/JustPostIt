@@ -1,0 +1,39 @@
+namespace SocialMedia_Demo.Models;
+
+public enum PersonStatus
+{
+    None = 0,
+    Pending = 1,
+    Accepted = 2,
+    Rejected = 3
+}
+
+public class Person
+{
+    public string Name { get; set; }
+    public int PersonId { get; set; }
+    public string Profile_Photo { get; set; }
+    public PersonStatus Status { get; set; }
+
+    public Person()
+    {
+        Name = "";
+        Profile_Photo = "";
+    }
+
+    public Person(string name, int id, string profilePhoto, PersonStatus status)
+    {
+        if (!string.IsNullOrEmpty(name) && !string.IsNullOrEmpty(profilePhoto))
+        {
+            Name = name;
+            PersonId = id;
+            Profile_Photo = profilePhoto;
+            Status = status;
+        }
+        else
+        {
+            Name = "";
+            Profile_Photo = "";
+        }
+    }
+}

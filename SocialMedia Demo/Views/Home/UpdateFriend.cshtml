@@ -1,0 +1,14 @@
+@if (ViewBag.succeed)
+{
+    <div class="alert alert-success d-flex justify-content-between">
+        Done!
+        <span class="hide-alert" onclick="hidealert()" style="cursor: pointer">x</span>
+    </div>
+}
+else
+{
+    <div class="alert alert-warning d-flex justify-content-between">
+        There was some error sorry
+        <span class="hide-alert" onclick="hidealert()" style="cursor: pointer">x</span>
+    </div>
+}
