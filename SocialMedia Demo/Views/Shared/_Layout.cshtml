@@ -1,3 +1,4 @@
+@using SocialMedia_Demo.Controllers
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 <!DOCTYPE html>
@@ -55,8 +56,7 @@
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                         <a href="">
-                            <img class="ms-3" width="40px" height="40px" src="" alt="">
-                            
+                            <img class="ms-3" width="40px" height="40px" src="~/images/profilePhotos/@User.Claims.First(c => c.Type == "profile").Value" alt="">
                             @* todo: Bind a model with viewbag or smthing after finishing autherization*@
                         </a>
                     </form>

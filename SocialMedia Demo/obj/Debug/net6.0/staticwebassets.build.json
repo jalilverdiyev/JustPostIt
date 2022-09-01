@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YWvAb195OmxbsUyp9cbJsUN5gmRboM/0xPhCR8iJk7E=",
+  "Hash": "rB8+KxbmnaAI6YQQCdevF/VB52Vj1DU4IYrhBpspc2Q=",
   "Source": "SocialMedia Demo",
   "BasePath": "_content/SocialMedia Demo",
   "Mode": "Default",
@@ -134,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/profilePhotos/2b479606-2504-4d58-b1af-83e98ace71fe.png"
+    },
+    {
+      "Identity": "/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/wwwroot/images/profilePhotos/989897f9-33ff-4375-9418-de954a5fefab.png",
+      "SourceId": "SocialMedia Demo",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/wwwroot/",
+      "BasePath": "_content/SocialMedia Demo",
+      "RelativePath": "images/profilePhotos/989897f9-33ff-4375-9418-de954a5fefab.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/profilePhotos/989897f9-33ff-4375-9418-de954a5fefab.png"
     },
     {
       "Identity": "/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/wwwroot/images/profilePhotos/default.png",

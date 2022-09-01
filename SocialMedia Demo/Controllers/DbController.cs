@@ -15,7 +15,7 @@ public static class  DbController
         return result;
     }   
     //CRUD operations
-    public static List<Person> GetUsers(int id)
+    public static List<Person> GetPeople(int id)
     {
         List<Person> friends = GetFriends(id);
         List<Person> people = new List<Person>();
@@ -154,6 +154,40 @@ public static class  DbController
 
         return friends;
     }
+
+    /*public static string GetProfilePhotoById(int id)
+    {
+        string photo="";
+        try
+        {
+            if (Conn.State != ConnectionState.Open)
+            {
+                Conn.Open();
+            }
+
+            string query = $"SELECT ProfilePhoto FROM Users WHERE Id={id}";
+            MySqlCommand cmd = new MySqlCommand(query, Conn);
+            MySqlDataReader dataReader = cmd.ExecuteReader();
+            while (dataReader.Read())
+            {
+                photo = (string)dataReader[0];
+            }
+        }
+        catch (MySqlException e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+        finally
+        {
+            if (Conn.State != ConnectionState.Closed)
+            {
+                Conn.Close();
+            }
+        }
+
+        return photo;
+    }*/
     
     public static bool Add(User user)
     {
@@ -269,9 +303,9 @@ public static class  DbController
     // public static bool Modify(params string[] moreColumns){}
     
     //Login 
-    public static bool Authenticate(User user)
+    public static (Person,bool) Authenticate(User user)
     {
-        bool result = false;
+        Person person = new Person();
         if (user.Password != null)
         {
             try
@@ -281,24 +315,22 @@ public static class  DbController
                     Conn.Open();
                 }
 
-                string query = $"SELECT Password FROM Users WHERE UserName = '{user.UserName}'";
+                string query = $"SELECT Password,Id,ProfilePhoto FROM Users WHERE UserName = '{user.UserName}'";
                 MySqlCommand command = new MySqlCommand(query, Conn);
                 MySqlDataReader reader = command.ExecuteReader();
-                List<string> passes = new List<string>();
+                string pass="";
+                person.Name = user.UserName!;
+                person.Status = PersonStatus.None;
                 while (reader.Read())
                 {
-                    string? read = reader[0].ToString();
-                    if (read != null)
-                    {
-                        passes.Add(read);
-                    }
+                    pass = (string)reader[0]; 
+                    person.PersonId = (int)reader[1];
+                    person.Profile_Photo = (string)reader[2];
                 }
-
-                foreach (var pass in passes)
+                if (BCrypt.Net.BCrypt.Verify(user.Password, pass))
                 {
-                    result = BCrypt.Net.BCrypt.Verify(user.Password , pass);
+                    return (person,true);
                 }
-                
             }
             catch (MySqlException e)
             {
@@ -311,6 +343,6 @@ public static class  DbController
             }
         }
 
-        return result;
+        return (person, false);
     }
 }
