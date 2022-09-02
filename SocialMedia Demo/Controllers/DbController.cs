@@ -4,9 +4,19 @@ using SocialMedia_Demo.Models;
 
 namespace SocialMedia_Demo.Controllers;
 
-public static class  DbController
+public static class DbController
 {
-    private static readonly MySqlConnection Conn = new MySqlConnection("Server=localhost;Database=csharp;uid=root;password=admin1234");
+    private static IConfiguration _config;
+    public static IConfiguration Configuration {
+        get {
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json");
+            _config = builder.Build();
+            return _config;
+        }
+    }
+    private static readonly MySqlConnection Conn = new MySqlConnection(Configuration.GetConnectionString("JPIDatabase"));
     
     private static string HashPass(string input)
     {
