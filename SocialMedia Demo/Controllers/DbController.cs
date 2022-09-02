@@ -6,7 +6,7 @@ namespace SocialMedia_Demo.Controllers;
 
 public static class DbController
 {
-    private static IConfiguration _config;
+    private static IConfiguration _config = null!;
     public static IConfiguration Configuration {
         get {
             var builder = new ConfigurationBuilder()
@@ -290,7 +290,7 @@ public static class DbController
         try
         {
             string query =
-                $"UPDATE Friendship SET Status={(int)person.Status} WHERE UserId ={id} AND FriendId={person.PersonId}";
+                $"UPDATE Friendship SET Status={(int)person.Status} WHERE UserId ={person.PersonId} AND FriendId={id}";
 
             MySqlCommand command = new MySqlCommand(query,Conn);
             result = command.ExecuteNonQuery();

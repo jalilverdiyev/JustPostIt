@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rB8+KxbmnaAI6YQQCdevF/VB52Vj1DU4IYrhBpspc2Q=",
+  "Hash": "NvEAO+xwcLQTdKdVJJ2p3uQAy+qUOS0TbZg8XVgdUPA=",
   "Source": "SocialMedia Demo",
   "BasePath": "_content/SocialMedia Demo",
   "Mode": "Default",
@@ -85,6 +85,23 @@
       "OriginalItemSpec": "wwwroot/css/style.scss"
     },
     {
+      "Identity": "/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/wwwroot/css/upload.css",
+      "SourceId": "SocialMedia Demo",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/wwwroot/",
+      "BasePath": "_content/SocialMedia Demo",
+      "RelativePath": "css/upload.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/upload.css"
+    },
+    {
       "Identity": "/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/wwwroot/favicon.ico",
       "SourceId": "SocialMedia Demo",
       "SourceType": "Discovered",
@@ -119,12 +136,12 @@
       "OriginalItemSpec": "wwwroot/images/27002.jpg"
     },
     {
-      "Identity": "/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/wwwroot/images/profilePhotos/2b479606-2504-4d58-b1af-83e98ace71fe.png",
+      "Identity": "/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/wwwroot/images/profilePhotos/b42f4e14-5c60-4c0c-95ed-7bb1fc017609.png",
       "SourceId": "SocialMedia Demo",
       "SourceType": "Discovered",
       "ContentRoot": "/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/wwwroot/",
       "BasePath": "_content/SocialMedia Demo",
-      "RelativePath": "images/profilePhotos/2b479606-2504-4d58-b1af-83e98ace71fe.png",
+      "RelativePath": "images/profilePhotos/b42f4e14-5c60-4c0c-95ed-7bb1fc017609.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -133,24 +150,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/images/profilePhotos/2b479606-2504-4d58-b1af-83e98ace71fe.png"
-    },
-    {
-      "Identity": "/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/wwwroot/images/profilePhotos/989897f9-33ff-4375-9418-de954a5fefab.png",
-      "SourceId": "SocialMedia Demo",
-      "SourceType": "Discovered",
-      "ContentRoot": "/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/wwwroot/",
-      "BasePath": "_content/SocialMedia Demo",
-      "RelativePath": "images/profilePhotos/989897f9-33ff-4375-9418-de954a5fefab.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/images/profilePhotos/989897f9-33ff-4375-9418-de954a5fefab.png"
+      "OriginalItemSpec": "wwwroot/images/profilePhotos/b42f4e14-5c60-4c0c-95ed-7bb1fc017609.png"
     },
     {
       "Identity": "/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/wwwroot/images/profilePhotos/default.png",
@@ -202,6 +202,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/js/site.js"
+    },
+    {
+      "Identity": "/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/wwwroot/js/upload.js",
+      "SourceId": "SocialMedia Demo",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/wwwroot/",
+      "BasePath": "_content/SocialMedia Demo",
+      "RelativePath": "js/upload.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/upload.js"
     },
     {
       "Identity": "/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",

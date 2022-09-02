@@ -15,7 +15,7 @@ public class AuthenticationController : Controller
         ViewData["returnUrl"] = returnUrl;
         return View();
     }
-
+    [HttpGet("register")]
     public IActionResult Register()
     {
         return View();
@@ -44,19 +44,19 @@ public class AuthenticationController : Controller
         return BadRequest();
     }
     
-    [HttpPost]
+    [HttpPost("register")]
     public IActionResult Register(User usr)
     {
         bool isSuccess =  DbController.Add(usr);
         ContentResult cr = new ContentResult();
         if (isSuccess)
         {
-            cr.Content = "Added successfully";
-            return cr;
+            return Redirect("login");
         }
 
         cr.Content = "There was some errors";
         return cr;
+        //Todo:  Make better error logs or something
     }
     
 }

@@ -56,7 +56,6 @@ function addFriend(id,name,url)
 {
 	// let profile_photo = document.getElementById(id); after profile photo added
 		$.post(url, {
-			Id:2,
 			name:name,
 			PersonId:id,
 			status: 1
@@ -70,9 +69,8 @@ function updateFriend(id,name,url,action)
 {
 	let status = action === 'accept' ? 2 : 3; 
 	$.post(url,{
-		Id: id,
 		name : name,
-		PersonId: 2,
+		PersonId: id,
 		status: status
 	},function(response){
 		$('.popup').html(response);

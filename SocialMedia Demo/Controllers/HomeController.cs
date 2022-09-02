@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using SocialMedia_Demo.Models;
 
@@ -8,12 +7,10 @@ namespace SocialMedia_Demo.Controllers;
 [Authorize]
 public class HomeController : Controller
 {
-    private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly int _id;
     public HomeController(IHttpContextAccessor httpContextAccessor)
     {
-        _httpContextAccessor = httpContextAccessor;
-        _id = Convert.ToInt32(_httpContextAccessor.HttpContext.User.Claims.First(c => c.Type.Contains("nameidentifier")).Value);
+        _id = Convert.ToInt32(httpContextAccessor.HttpContext!.User.Claims.First(c => c.Type.Contains("nameidentifier")).Value);
     }
     public IActionResult Index()
     {
@@ -46,9 +43,9 @@ public class HomeController : Controller
     }
     
     [HttpPost]
-    public IActionResult AddFriend(int id,Person person)
+    public IActionResult AddFriend(Person person)
     {
-        bool success = DbController.AddFriend(id, person);
+        bool success = DbController.AddFriend(_id, person);
         ViewBag.added = success;
         var view = View();
         return view;
@@ -56,9 +53,9 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public IActionResult UpdateFriend(int id, Person person)
+    public IActionResult UpdateFriend( Person person)
     {
-        bool succeed = DbController.UpdateFriend(id, person);
+        bool succeed = DbController.UpdateFriend(_id, person);
         ViewBag.succeed = succeed;
         var view = View();
         return view;
