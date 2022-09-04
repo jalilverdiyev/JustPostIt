@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NvEAO+xwcLQTdKdVJJ2p3uQAy+qUOS0TbZg8XVgdUPA=",
+  "Hash": "4KqQ7mrw3yGVg7iy4L1SGBs44UARXjEAwCLCBnYrzQ8=",
   "Source": "SocialMedia Demo",
   "BasePath": "_content/SocialMedia Demo",
   "Mode": "Default",
@@ -134,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/27002.jpg"
+    },
+    {
+      "Identity": "/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/wwwroot/images/profilePhotos/519471ee-2c3e-4207-823a-541841bd8e06.png",
+      "SourceId": "SocialMedia Demo",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/wwwroot/",
+      "BasePath": "_content/SocialMedia Demo",
+      "RelativePath": "images/profilePhotos/519471ee-2c3e-4207-823a-541841bd8e06.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/profilePhotos/519471ee-2c3e-4207-823a-541841bd8e06.png"
     },
     {
       "Identity": "/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/wwwroot/images/profilePhotos/b42f4e14-5c60-4c0c-95ed-7bb1fc017609.png",

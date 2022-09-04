@@ -1,0 +1,28 @@
+/tmp/rider-publish13781512345575413715/SocialMedia Demo
+/tmp/rider-publish13781512345575413715/appsettings.Development.json
+/tmp/rider-publish13781512345575413715/appsettings.json
+/tmp/rider-publish13781512345575413715/SocialMedia Demo.dll
+/tmp/rider-publish13781512345575413715/SocialMedia Demo.deps.json
+/tmp/rider-publish13781512345575413715/SocialMedia Demo.runtimeconfig.json
+/tmp/rider-publish13781512345575413715/SocialMedia Demo.pdb
+/tmp/rider-publish13781512345575413715/BCrypt.Net-Next.dll
+/tmp/rider-publish13781512345575413715/Google.Protobuf.dll
+/tmp/rider-publish13781512345575413715/K4os.Compression.LZ4.dll
+/tmp/rider-publish13781512345575413715/K4os.Compression.LZ4.Streams.dll
+/tmp/rider-publish13781512345575413715/K4os.Hash.xxHash.dll
+/tmp/rider-publish13781512345575413715/Microsoft.Win32.SystemEvents.dll
+/tmp/rider-publish13781512345575413715/MySql.Data.dll
+/tmp/rider-publish13781512345575413715/Ubiety.Dns.Core.dll
+/tmp/rider-publish13781512345575413715/ZstdNet.dll
+/tmp/rider-publish13781512345575413715/Newtonsoft.Json.dll
+/tmp/rider-publish13781512345575413715/BouncyCastle.Crypto.dll
+/tmp/rider-publish13781512345575413715/System.Configuration.ConfigurationManager.dll
+/tmp/rider-publish13781512345575413715/System.Drawing.Common.dll
+/tmp/rider-publish13781512345575413715/System.Security.Cryptography.ProtectedData.dll
+/tmp/rider-publish13781512345575413715/System.Security.Permissions.dll
+/tmp/rider-publish13781512345575413715/System.Windows.Extensions.dll
+/tmp/rider-publish13781512345575413715/runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll
+/tmp/rider-publish13781512345575413715/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll
+/tmp/rider-publish13781512345575413715/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll
+/tmp/rider-publish13781512345575413715/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/tmp/rider-publish13781512345575413715/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll

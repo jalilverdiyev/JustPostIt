@@ -20,9 +20,15 @@ public class AuthenticationController : Controller
     {
         return View();
     }
+
+    public async Task<IActionResult> LogOut()
+    {
+        await HttpContext.SignOutAsync();
+        return Redirect("/");
+    }
     
     [HttpPost("login")]
-    public async Task<IActionResult> Login(User user, string returnUrl, string rememberMe)
+    public async Task<IActionResult> Login(User user,  string rememberMe,string returnUrl="/")
     {
         var authed = DbController.Authenticate(user);
         if (authed.Item2)
