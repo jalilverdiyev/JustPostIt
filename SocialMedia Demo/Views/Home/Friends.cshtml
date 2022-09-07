@@ -1,21 +1,23 @@
 @{
     Layout = "_Layout";
 }
-@model List<Person>
+@{
+    var friends = ViewBag.friends;
+}
 
 <div class="container">
     <div class="row">
         <div class="col-2">
             <div class="list-group friend_list" id="list-tab" role="tablist">
-                @foreach (var person in @Model)
+                @foreach (var person in friends)
                 {
-                    <a class="list-group-item list-group-item-action">
+                    <button class="list-group-item list-group-item-action" onclick="getFriendPosts(@person.PersonId,'@Url.Action("GetFriendPosts","Post")')">
                         <div class="friend p-2 ">
                             <img class="profilePhoto" src="~/images/profilePhotos/@person.Profile_Photo" width="35px" height="35px"
                                  alt="">
-                            <h4 id="userName">@person.Name</h4>
+                            <h4 id="@person.PersonId">@person.Name</h4>
                         </div>
-                    </a>
+                    </button>
                 }
             </div>
             <div class="contentpage">

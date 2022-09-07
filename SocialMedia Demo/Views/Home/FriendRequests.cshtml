@@ -1,12 +1,14 @@
 @{
     Layout = "_Layout";
 }
-@model List<Person>
+@{
+    var requests = ViewBag.requests;
+}
 
 <div class="container">
 <div class="popup" id="popup"></div>
     <div class="container d-flex flex-row flex-wrap cont">
-        @foreach (var request in @Model)
+        @foreach (var request in requests)
         {
             <div class=" d-flex justify-content-center align-items-center conta">
                 <div class="card">

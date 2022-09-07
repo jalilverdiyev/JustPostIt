@@ -1,6 +1,7 @@
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SocialMedia_Demo.Models;
 
@@ -20,15 +21,16 @@ public class AuthenticationController : Controller
     {
         return View();
     }
-
+    [Authorize]
     public async Task<IActionResult> LogOut()
     {
         await HttpContext.SignOutAsync();
         return Redirect("/");
     }
     
+
     [HttpPost("login")]
-    public async Task<IActionResult> Login(User user,  string rememberMe,string returnUrl="/")
+    public async Task<IActionResult> Login(User user, string rememberMe, string returnUrl = "/")
     {
         var authed = DbController.Authenticate(user);
         if (authed.Item2)

@@ -1,0 +1,34 @@
+@{
+    Layout = null;
+}
+
+@{
+    var posts = ViewBag.posts;
+}
+
+<div class="posts" style="height: 100%">
+    @foreach (var post in posts)
+    {
+        <div class="post">
+            <div class="contents">
+                @if (!String.IsNullOrEmpty(post.Text))
+                {
+                    <div class="container">
+                        <p class="text">
+                            @post.Text
+                        </p>
+                    </div>    
+                }
+                @if (post.Paths != null)
+                {
+                    <div class="images d-flex justify-content-center flex-wrap">
+                        @foreach (var path in post.Paths)
+                        {
+                            <img src="/images/postPhotos/@path" alt="" class="image">
+                        }
+                    </div>    
+                }
+            </div>
+        </div>
+    }
+</div>

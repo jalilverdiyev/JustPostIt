@@ -14,32 +14,50 @@ public class HomeController : Controller
     }
     public IActionResult Index()
     {
+        var posts = DbController.GetPosts(_id,DbController.GetPostType.People);
+        ViewBag.posts = posts;
         return View();
     }
 
     public IActionResult FriendsPosts()
     {
+        var friends = DbController.GetFriends(_id);
+        List<List<Post>> posts = new List<List<Post>>();
+        foreach (var friend in friends)
+        {
+            posts.Add(DbController.GetPosts(friend.PersonId,DbController.GetPostType.Self));
+        }
+        ViewBag.posts = posts;
         return View();
     }
 
+    public IActionResult SelfPosts()
+    {
+        var posts = DbController.GetPosts(_id, DbController.GetPostType.Self);
+        ViewBag.posts = posts;
+        return View();
+    }
+    
     public IActionResult People()
     {
         
         List<Person> people = DbController.GetPeople(Convert.ToInt32(_id));
-        
-        return View(people);
+        ViewBag.people = people;
+        return View();
     }
 
     public IActionResult Friends()
     {
-        var list = DbController.GetFriends(_id).FindAll(friend => friend.Status == PersonStatus.Accepted);
-        return View(list);
+        var friends = DbController.GetFriends(_id).FindAll(friend => friend.Status == PersonStatus.Accepted);
+        ViewBag.friends = friends;
+        return View();
     }
 
     public IActionResult FriendRequests()
     {
-        var friends = DbController.GetFriendRequests(_id).FindAll(friend => friend.Status == PersonStatus.Pending);
-        return View(friends);
+        var requests = DbController.GetFriendRequests(_id).FindAll(friend => friend.Status == PersonStatus.Pending);
+        ViewBag.requests = requests;
+        return View();
     }
     
     [HttpPost]

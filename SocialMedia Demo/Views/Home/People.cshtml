@@ -1,7 +1,9 @@
 @{
     Layout = "_Layout";
 }
-@model List<Person>
+@{
+    var people = ViewBag.people;
+}
 
 <div class="container">
     <div class="popup" id="popup"></div>
@@ -9,7 +11,7 @@
 
         @{
             int counter = 1;
-            foreach (var person in @Model)
+            foreach (var person in people)
             {
                 <div class="person p-2 border d-flex flex-row">
                     <div class="container d-flex flex-row">

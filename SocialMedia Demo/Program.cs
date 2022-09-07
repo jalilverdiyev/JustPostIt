@@ -8,15 +8,6 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options =>
         {
             options.LoginPath = "/login";
-            builder.Configuration.Bind("CookieSettings",options);
-            options.Events = new CookieAuthenticationEvents()
-            {
-                OnSigningIn = async context =>
-                {
-                    options.ExpireTimeSpan = TimeSpan.FromSeconds(15);
-                    await Task.CompletedTask;
-                }
-            };
         });
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 

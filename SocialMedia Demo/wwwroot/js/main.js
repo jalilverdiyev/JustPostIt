@@ -78,6 +78,14 @@ function updateFriend(id,name,url,action)
 	});
 }
 
+function getFriendPosts(id,url){
+	$.post(url,{
+		id: id
+	},function(response){
+		$('.contentpage').html(response);	
+	})
+}
+
 //Ui matters :)
 function hidealert(){
 	document.getElementById('popup').style.display = "none";
