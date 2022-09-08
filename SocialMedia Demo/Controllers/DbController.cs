@@ -390,18 +390,18 @@ public static class DbController
                 case GetPostType.None:
                     return posts;
                 case GetPostType.Self:
-                     query = $"SELECT Posts.Id,Posts.Text,NULL as Path,Posts.OwnerId,Users.UserName,Users.ProfilePhoto FROM Posts " +
+                     query = $"SELECT Posts.Id,Posts.Text,NULL as Path,Posts.OwnerId,Users.UserName,Users.ProfilePhoto,Posts.DateAdded FROM Posts " +
                                    $"INNER JOIN Users ON Posts.OwnerId = Users.Id WHERE Posts.OwnerId = {id} " +
-                                   $"UNION SELECT Posts.Id,Posts.Text,PostPhotos.Path,Posts.OwnerId,Users.UserName,Users.ProfilePhoto FROM PostPhotos " +
+                                   $"UNION SELECT Posts.Id,Posts.Text,PostPhotos.Path,Posts.OwnerId,Users.UserName,Users.ProfilePhoto,Posts.DateAdded FROM PostPhotos " +
                                    $"INNER JOIN Posts ON PostPhotos.PostId=Posts.Id AND Posts.Id " +
-                                   $"INNER JOIN Users On Posts.OwnerId = Users.Id WHERE Posts.OwnerId = {id}";
+                                   $"INNER JOIN Users On Posts.OwnerId = Users.Id WHERE Posts.OwnerId = {id} ORDER BY DateAdded DESC";
                     break;
                 case GetPostType.People:
-                    query = $"SELECT Posts.Id,Posts.Text,NULL as Path,Posts.OwnerId,Users.UserName,Users.ProfilePhoto FROM Posts " +
+                    query = $"SELECT Posts.Id,Posts.Text,NULL as Path,Posts.OwnerId,Users.UserName,Users.ProfilePhoto,Posts.DateAdded FROM Posts " +
                             $"INNER JOIN Users ON Posts.OwnerId = Users.Id WHERE Posts.OwnerId != {id} " +
-                            $"UNION SELECT Posts.Id,Posts.Text,PostPhotos.Path,Posts.OwnerId,Users.UserName,Users.ProfilePhoto FROM PostPhotos " +
+                            $"UNION SELECT Posts.Id,Posts.Text,PostPhotos.Path,Posts.OwnerId,Users.UserName,Users.ProfilePhoto,Posts.DateAdded FROM PostPhotos " +
                             $"INNER JOIN Posts ON PostPhotos.PostId=Posts.Id AND Posts.Id " +
-                            $"INNER JOIN Users On Posts.OwnerId = Users.Id WHERE Posts.OwnerId != {id}";
+                            $"INNER JOIN Users On Posts.OwnerId = Users.Id WHERE Posts.OwnerId != {id} ORDER BY DateAdded DESC";
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(type), type, null);

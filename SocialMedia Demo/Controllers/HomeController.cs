@@ -21,7 +21,7 @@ public class HomeController : Controller
 
     public IActionResult FriendsPosts()
     {
-        var friends = DbController.GetFriends(_id);
+        var friends = DbController.GetFriends(_id).FindAll(friend => friend.Status == PersonStatus.Accepted);
         List<List<Post>> posts = new List<List<Post>>();
         foreach (var friend in friends)
         {

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RBlmLPmoEU7yJnonmGkBoaCrzvjaqy3Kgzz8QN16OJc=",
+  "Hash": "PUguseFJ6pb2rRmdUOD6YWDmIXoVau/1xo9nGZqLwd8=",
   "Source": "SocialMedia Demo",
   "BasePath": "_content/SocialMedia Demo",
   "Mode": "Default",
@@ -202,6 +202,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/postPhotos/2e9ff291-9c84-480a-bf1e-71a0a4a7e9c6.jpeg"
+    },
+    {
+      "Identity": "/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/wwwroot/images/postPhotos/64e01ba2-db68-4909-a92d-8122901c4595.jpeg",
+      "SourceId": "SocialMedia Demo",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/wwwroot/",
+      "BasePath": "_content/SocialMedia Demo",
+      "RelativePath": "images/postPhotos/64e01ba2-db68-4909-a92d-8122901c4595.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/postPhotos/64e01ba2-db68-4909-a92d-8122901c4595.jpeg"
     },
     {
       "Identity": "/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/wwwroot/images/postPhotos/8c6fde39-0343-4b8b-b1c3-c3871c3c4143.png",
