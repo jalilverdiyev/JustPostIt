@@ -1,0 +1,29 @@
+@{
+    Layout = "_Layout";
+}
+@{
+    var friends = ViewBag.friends;
+    var photoUrl = "https://localhost:7162/api";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-2">
+            <div class="list-group friend_list" id="list-tab" role="tablist">
+                @foreach (var person in friends)
+                {
+                    <button class="list-group-item list-group-item-action" onclick="getFriendPosts(@person.PersonId,'@Url.Action("GetFriendPosts","Post")')">
+                        <div class="friend p-2 ">
+                            <img class="profilePhoto" src="@photoUrl/images/profilePhotos/@person.Profile_Photo" width="35px" height="35px"
+                                 alt="">
+                            <h4 id="@person.PersonId">@person.Name</h4>
+                        </div>
+                    </button>
+                }
+            </div>
+            <div class="contentpage">
+                Choose a friend to see his posts
+            </div>
+        </div>
+    </div>
+</div>

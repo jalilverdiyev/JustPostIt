@@ -28,19 +28,19 @@ function activeCheck() {
 			people.style.borderBottom = "none";
 			// friends.style.borderBottom = "none";
 			break;
-		case "/Home/FriendsPosts":
+		case "/Post/FriendsPosts":
 			posts.style.borderBottom = "none";
 			friends_posts.style.borderBottom = "3px solid #0e73a7";
 			people.style.borderBottom = "none";
 			// friends.style.borderBottom = "none";
 			break;
-		case "/Home/People":
+		case "/Person/People":
 			posts.style.borderBottom = "none";
 			friends_posts.style.borderBottom = "none";
 			people.style.borderBottom = "3px solid #0e73a7";
 			// friends.style.borderBottom = "none";
 			break;
-		case "/Home/Friends":
+		case "/Person/Friends":
 			posts.style.borderBottom = "none";
 			friends_posts.style.borderBottom = "none";
 			people.style.borderBottom = "none";

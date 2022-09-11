@@ -15,13 +15,16 @@ public class Person
     public string Profile_Photo { get; set; }
     public PersonStatus Status { get; set; }
 
+    public bool IsValid { get; set; }
+    
     public Person()
     {
         Name = "";
         Profile_Photo = "";
+        IsValid = false;
     }
 
-    public Person(string name, int id, string profilePhoto, PersonStatus status)
+    public Person(string name, int id, string profilePhoto, PersonStatus status, bool isValid)
     {
         if (!string.IsNullOrEmpty(name) && !string.IsNullOrEmpty(profilePhoto))
         {
@@ -29,6 +32,7 @@ public class Person
             PersonId = id;
             Profile_Photo = profilePhoto;
             Status = status;
+            IsValid = isValid;
         }
         else
         {
