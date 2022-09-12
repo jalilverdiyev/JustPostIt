@@ -9,7 +9,7 @@ public enum ImageType
 
 public static class FileManager
 {
-    public static List<string> SaveFiles(IFormFile[] files,ImageType type)
+    public static List<string> SaveFiles(List<IFormFile> files,ImageType type)
     {
         List<string> uniqueNames = new List<string>();
         string dir = Directory.GetCurrentDirectory(); 

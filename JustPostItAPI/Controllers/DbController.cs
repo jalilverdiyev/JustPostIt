@@ -216,7 +216,7 @@ public static class DbController
                 string profilePhoto;
                 if (user.ProfilePhoto != null)
                 {
-                    IFormFile[] arr = { user.ProfilePhoto };
+                    List<IFormFile> arr = new List<IFormFile> { user.ProfilePhoto };
                     profilePhoto = FileManager.SaveFiles(arr, ImageType.Profile)[0];
                 }
                 else

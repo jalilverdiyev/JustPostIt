@@ -44,3 +44,4 @@
 /home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/obj/Debug/net6.0/SocialMedia Demo.csproj.CopyComplete
 /home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/bin/Debug/net6.0/BCrypt.Net-Next.dll
 /home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/bin/Debug/net6.0/Newtonsoft.Json.dll
+/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/bin/Debug/net6.0/RestSharp.dll

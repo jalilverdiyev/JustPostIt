@@ -1,6 +1,5 @@
 using JustPostItAPI.Models;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 
 namespace JustPostItAPI.Controllers;
 
@@ -34,10 +33,23 @@ public class PostController : ControllerBase
     }
 
     [HttpPost("AddNewPost")]
-    public bool AddNewPost([FromForm]string post)
+    public bool AddNewPost()
     {
-        var poste = JsonConvert.DeserializeObject<Post>(post);
-        return DbController.Add(poste);
+        var post = new Post();
+        var httpPostedFile = HttpContext.Request.Form;
+        var id = httpPostedFile["Id"];
+        post.OwnerId = Convert.ToInt32(id);
+        var text = httpPostedFile["Text"];
+        post.Text = text;
+        var orders = (string)httpPostedFile["Orders"];
+        post.Orders = orders.Split(',').Select(int.Parse).ToList();
+        List<IFormFile> list = new List<IFormFile>();
+        foreach (var file in httpPostedFile.Files)
+        {
+            list.Add(file);
+        }
+        post.Photos = list;
+        return DbController.Add(post);
     }
 
     [HttpGet("GetFriendPosts")]
@@ -45,4 +57,6 @@ public class PostController : ControllerBase
     {
         return DbController.GetPosts(id, DbController.GetPostType.Self);
     }
+    
+    
 }

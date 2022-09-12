@@ -49,45 +49,18 @@ public class PostController : Controller
     
     
     [HttpPost]
-    public async Task<IActionResult> NewPost(Post post, string orders)
-    {
-        post.Orders = orders.Split(',').Select(int.Parse).ToList();
-        post.OwnerId = _id;
-        string requestUrl = $"https://localhost:7162/api/Post/AddNewPost";
-        HttpClient client = new HttpClient(_handler);
-        // if (post.Photos != null)
-        // {
-        //     post.Orders = orders.Split(',').Select(int.Parse).ToList();
-        //     MultipartFormDataContent multiContent = new MultipartFormDataContent();
-        //     foreach (var photo in post.Photos)
-        //     {
-        //         byte[] data;    
-        //         using (var br = new BinaryReader(photo.OpenReadStream())) 
-        //         {
-        //             data = br.ReadBytes((int)photo.OpenReadStream().Length);
-        //         }
-        //         ByteArrayContent bytes = new ByteArrayContent(data);
-        //         multiContent.Add(bytes, "Photos", photo.FileName);
-        //     }    
-        //     if(post.Text != null)
-        //     {
-        //         multiContent.Add(new StringContent(post.Text),"Text");
-        //     }
-        //     var response = await client.PostAsync(requestUrl, multiContent);
-        //     result = Convert.ToBoolean(response.Content.ReadAsStringAsync().Result);
-        // }
-        // else
-        // {
-        //     var response = await client.PostAsJsonAsync(requestUrl,post);
-        //     result = Convert.ToBoolean(response.Content.ReadAsStringAsync().Result);
-        // }
-        var response = await client.PostAsJsonAsync(requestUrl,post);
-        bool result = Convert.ToBoolean(response.Content.ReadAsStringAsync().Result);
-        if(result)
-            return RedirectToAction("AllPosts", "Post");
-        
-        return BadRequest();
-    }
+    // public async Task<IActionResult> NewPost(Post post, string orders)
+    // {
+    //     post.Orders = orders.Split(',').Select(int.Parse).ToList();
+    //     post.OwnerId = _id;
+    //     post.Photos = Request.Form.Files as FormFile[];
+    //     string requestUrl = "https://localhost:7162/api/Post/AddNewPost";
+    //     HttpClient client = new HttpClient(_handler);
+    //     var response = await client.PostAsJsonAsync(requestUrl,post);
+    //     
+    //     return RedirectToAction("AllPosts", "Post");
+    //     return BadRequest();
+    // }
 
     [HttpPost]
     public async Task<IActionResult> GetFriendPosts(int id)

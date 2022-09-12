@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "dym9VNHfJKYkbRpW5YCUx/l5Y29qfWylnnsC+AtaObZrUHns8dFjNoHCrmp/xdvQYyAk7mYBUXQmlE0/v1kLaw==",
+  "dgSpecHash": "4HTXyZgjE5CFw/cbOQAjY/KnvFT9jmp+KKgbCEEweJo88o17xUe9SKKlf9Vf/m+nP8e8k2E3EenGto3i6Dn61w==",
   "success": true,
   "projectFilePath": "/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/SocialMedia Demo.csproj",
   "expectedPackageFiles": [
@@ -14,6 +14,7 @@
     "/home/jverdiyev/.nuget/packages/mysql.data/8.0.30/mysql.data.8.0.30.nupkg.sha512",
     "/home/jverdiyev/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
     "/home/jverdiyev/.nuget/packages/portable.bouncycastle/1.9.0/portable.bouncycastle.1.9.0.nupkg.sha512",
+    "/home/jverdiyev/.nuget/packages/restsharp/108.0.1/restsharp.108.0.1.nupkg.sha512",
     "/home/jverdiyev/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
     "/home/jverdiyev/.nuget/packages/system.configuration.configurationmanager/4.4.1/system.configuration.configurationmanager.4.4.1.nupkg.sha512",
     "/home/jverdiyev/.nuget/packages/system.drawing.common/4.7.0/system.drawing.common.4.7.0.nupkg.sha512",
