@@ -1,9 +1,19 @@
 using Microsoft.Extensions.FileProviders;
 
+var specificOrigins = "_specificOrigins";
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name:specificOrigins,
+        policy =>
+        {
+            policy.WithOrigins("https://localhost:7063");
+        });
+});
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -34,6 +44,8 @@ app.UseDirectoryBrowser(new DirectoryBrowserOptions()
         Path.Combine(Directory.GetCurrentDirectory(),@"wwwroot/images")),
     RequestPath = new PathString("/api/images")
 });
+
+app.UseCors(specificOrigins);
 
 app.UseAuthorization();
 

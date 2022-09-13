@@ -19,7 +19,7 @@ public class PersonController : Controller
     
     public async Task<IActionResult> People()
     {
-        string requestUrl = $"https://localhost:7162/api/Person/GetPeople?id={_id}";
+        string requestUrl = $"https://justpostitapi.azurewebsites.net/api/Person/GetPeople?id={_id}";
         HttpClient client = new HttpClient(_handler);
         var response = await client.GetStringAsync(requestUrl);
         var people = JsonConvert.DeserializeObject<List<Person>>(response);
@@ -29,7 +29,7 @@ public class PersonController : Controller
 
     public async Task<IActionResult> Friends()
     {
-        string requestUrl = $"https://localhost:7162/api/Person/GetFriends?id={_id}";
+        string requestUrl = $"https://justpostitapi.azurewebsites.net/api/Person/GetFriends?id={_id}";
         HttpClient client = new HttpClient(_handler);
         var response = await client.GetStringAsync(requestUrl);
         var friends = JsonConvert.DeserializeObject<List<Person>>(response);
@@ -39,7 +39,7 @@ public class PersonController : Controller
 
     public async Task<IActionResult> FriendRequests()
     {
-        string requestUrl = $"https://localhost:7162/api/Person/GetFriendsRequests?id={_id}";
+        string requestUrl = $"https://justpostitapi.azurewebsites.net/api/Person/GetFriendsRequests?id={_id}";
         HttpClient client = new HttpClient(_handler);
         var response = await client.GetStringAsync(requestUrl);
         var requests = JsonConvert.DeserializeObject<List<Person>>(response);
@@ -50,7 +50,7 @@ public class PersonController : Controller
     [HttpPost]
     public async Task<IActionResult> AddFriend(Person person)
     {
-        string requestUrl = $"https://localhost:7162/api/Person/AddFriend?id={_id}";
+        string requestUrl = $"https://justpostitapi.azurewebsites.net/api/Person/AddFriend?id={_id}";
         HttpClient client = new HttpClient(_handler);
         var response = await client.PostAsJsonAsync(requestUrl,person);
         bool success = Convert.ToBoolean(response.Content.ReadAsStringAsync().Result);
@@ -62,7 +62,7 @@ public class PersonController : Controller
     [HttpPost]
     public async Task<IActionResult> UpdateFriend( Person person)
     {
-        string requestUrl = $"https://localhost:7162/api/Person/UpdateFriend?id={_id}";
+        string requestUrl = $"https://justpostitapi.azurewebsites.net/api/Person/UpdateFriend?id={_id}";
         HttpClient client = new HttpClient(_handler);
         var response = await client.PutAsJsonAsync(requestUrl, person);
         bool succeed = Convert.ToBoolean(response.Content.ReadAsStringAsync().Result);

@@ -15,7 +15,7 @@ public class AuthenticationController : Controller
     public AuthenticationController()
     {
         _handler.UseDefaultCredentials = true;
-        _handler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true;  
+        _handler.ServerCertificateCustomValidationCallback = (_, _, _,_) => true;  
     }
     
     
@@ -35,7 +35,7 @@ public class AuthenticationController : Controller
     public async Task<IActionResult> Login(User user, string rememberMe, string returnUrl = "/")
     {
         HttpClient client = new HttpClient(_handler);
-        string requestUrl = "https://localhost:7162/api/Authentication/Login";
+        string requestUrl = "https://justpostitapi.azurewebsites.net/api/Authentication/Login";
         var post = await client.PostAsJsonAsync(requestUrl, user);
         var result = post.Content.ReadAsStringAsync().Result;
         var authed = JsonConvert.DeserializeObject<Person>(result);
@@ -58,25 +58,7 @@ public class AuthenticationController : Controller
         return BadRequest();
         
     }
-    
-    [HttpPost("register")]
-    public async Task<IActionResult> Register(User usr)
-    {
-        HttpClient client = new HttpClient(_handler);
-        string requestUrl = "https://localhost:7162/api/Authentication/Register";
-        var response = await client.PostAsJsonAsync(requestUrl, usr);
-        bool isSuccess = JsonConvert.DeserializeObject<bool>(response.Content.ReadAsStringAsync().Result);
-        ContentResult cr = new ContentResult();
-        if (isSuccess)
-        {
-            return Redirect("login");
-        }
-        
-        cr.Content = "There was some errors";
-        return cr;
-        //Todo:  Make better error logs or something
-    }
-    
+
     [Authorize]
     public async Task<IActionResult> LogOut()
     {

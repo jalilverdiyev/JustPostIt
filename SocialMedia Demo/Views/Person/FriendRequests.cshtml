@@ -3,6 +3,7 @@
 }
 @{
     var requests = ViewBag.requests;
+    var photoUrl = "https://justpostitapi.azurewebsites.net/api";
 }
 
 <div class="container">
@@ -14,7 +15,7 @@
                 <div class="card">
                     <div class="user text-center">
                         <div class="profile mt-3">
-                            <img alt="" src="~/images/profilePhotos/@request.Profile_Photo" class="rounded-circle" width="80">
+                            <img alt="" src="@photoUrl/images/profilePhotos/@request.Profile_Photo" class="rounded-circle" width="80">
                         </div>
                     </div>
                     <div class="mt-5 text-center">

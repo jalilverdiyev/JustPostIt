@@ -1,0 +1,29 @@
+/tmp/rider-publish12569498070146926236/SocialMedia Demo
+/tmp/rider-publish12569498070146926236/appsettings.Development.json
+/tmp/rider-publish12569498070146926236/appsettings.json
+/tmp/rider-publish12569498070146926236/SocialMedia Demo.dll
+/tmp/rider-publish12569498070146926236/SocialMedia Demo.deps.json
+/tmp/rider-publish12569498070146926236/SocialMedia Demo.runtimeconfig.json
+/tmp/rider-publish12569498070146926236/SocialMedia Demo.pdb
+/tmp/rider-publish12569498070146926236/BCrypt.Net-Next.dll
+/tmp/rider-publish12569498070146926236/Google.Protobuf.dll
+/tmp/rider-publish12569498070146926236/K4os.Compression.LZ4.dll
+/tmp/rider-publish12569498070146926236/K4os.Compression.LZ4.Streams.dll
+/tmp/rider-publish12569498070146926236/K4os.Hash.xxHash.dll
+/tmp/rider-publish12569498070146926236/Microsoft.Win32.SystemEvents.dll
+/tmp/rider-publish12569498070146926236/MySql.Data.dll
+/tmp/rider-publish12569498070146926236/Ubiety.Dns.Core.dll
+/tmp/rider-publish12569498070146926236/ZstdNet.dll
+/tmp/rider-publish12569498070146926236/Newtonsoft.Json.dll
+/tmp/rider-publish12569498070146926236/BouncyCastle.Crypto.dll
+/tmp/rider-publish12569498070146926236/RestSharp.dll
+/tmp/rider-publish12569498070146926236/System.Configuration.ConfigurationManager.dll
+/tmp/rider-publish12569498070146926236/System.Drawing.Common.dll
+/tmp/rider-publish12569498070146926236/System.Security.Cryptography.ProtectedData.dll
+/tmp/rider-publish12569498070146926236/System.Security.Permissions.dll
+/tmp/rider-publish12569498070146926236/System.Windows.Extensions.dll
+/tmp/rider-publish12569498070146926236/runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll
+/tmp/rider-publish12569498070146926236/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll
+/tmp/rider-publish12569498070146926236/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll
+/tmp/rider-publish12569498070146926236/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/tmp/rider-publish12569498070146926236/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll

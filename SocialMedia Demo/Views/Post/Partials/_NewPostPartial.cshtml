@@ -50,13 +50,15 @@
                 formData.append("Photos",file);    
             }
             $.ajax({
-            url:"https://localhost:7162/api/Post/AddNewPost",
+            url:"https://justpostitapi.azurewebsites.net/api/Post/AddNewPost",
             type:'POST',
             data: formData,
             contentType:false,
             processData:false,
             success: function (response){
-                console.log(response);
+                if(response){
+                    $('#exampleModal').modal('hide');
+                }
             }    
        });  
     })

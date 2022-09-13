@@ -24,13 +24,13 @@
             <div class="col-md-7 col-lg-5">
                 <div class="login-wrap p-4 p-md-5">
                     <h3 class="text-center mb-4">Sign Up</h3>
-                    <form asp-action="Register" asp-controller="Authentication" class="Register-form" method="post" enctype="multipart/form-data">
+                    <form class="Register-form" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <div class="container">
                                 <div class="panel">
                                     <div class="button_outer">
                                         <div class="btn_upload">
-                                            <input asp-for="ProfilePhoto" type="file" id="upload_file">
+                                            <input type="file" id="upload_file">
                                             Upload Image
                                         </div>
                                         <div class="processing_bar"></div>
@@ -44,20 +44,20 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <input asp-for="UserName" type="text" class="form-control rounded-left" placeholder="Username" required>
+                            <input id="username" type="text" class="form-control rounded-left" placeholder="Username" required>
                         </div>
                         <div class="form-group">
-                            <input asp-for="Email" type="email" class="form-control rounded-left" placeholder="Email" required>
+                            <input id="email" type="email" class="form-control rounded-left" placeholder="Email" required>
                         </div>
                         <div class="form-group d-flex">
-                            <input asp-for="Password" id="Pass" type="password" class="form-control rounded-left" placeholder="Password" required>
+                            <input id="Pass" type="password" class="form-control rounded-left" placeholder="Password" required>
                         </div>
                         <div class="form-group d-flex">
                             <input id="confirmPass" type="password" class="form-control rounded-left" placeholder="Confirm password " oninput="confirm()" required>
                         </div>
                         <div id="msgAlert" class="alert alert-danger" role="alert" style="display:none;">Passwords don't match</div>
                         <div class="form-group">
-                            <button id="btnSubmit" type="submit" class="form-control btn btn-primary rounded submit px-3" style="">Register</button>
+                            <button id="btnSubmit" class="form-control btn btn-primary rounded submit px-3" style="">Register</button>
                         </div>
                     </form>
                 </div>

@@ -1,5 +1,32 @@
 // Special thanks to https://codepen.io/mahtab-alam for photo upload component
 
+let btnSubmit = document.getElementById('btnSubmit');
+btnSubmit.addEventListener('click',e =>{
+    e.preventDefault();
+    let image = document.getElementById('upload_file');
+    let username = document.getElementById('username');
+    let email = document.getElementById('email');
+    let pass = document.getElementById('Pass');
+    const formData = new FormData();
+    formData.append('Username',username.value);
+    formData.append('Email',email.value);
+    formData.append('Password',pass.value);
+    formData.append('ProfilePhoto',image.files[0]);
+    $.ajax({
+        url:"https://justpostitapi.azurewebsites.net/api/Authentication/Register",
+        type:'POST',
+        data: formData,
+        contentType:false,
+        processData:false,
+        success:function(response){
+            if(response){
+                window.location.href = "https://justpostit.azurewebsites.net/login";
+            }
+        }
+    })
+
+});
+
 let btnUpload = $("#upload_file"),
     btnOuter = $(".button_outer");
 btnUpload.on("change", function(e){

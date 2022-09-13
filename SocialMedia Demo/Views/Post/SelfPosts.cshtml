@@ -3,7 +3,7 @@
 }
 @{
     var posts = ViewBag.posts;
-    var photoUrl = "https://localhost:7162/api";
+    var photoUrl = "https://justpostitapi.azurewebsites.net/api";
 }
 
 <div class="posts">
@@ -11,18 +11,7 @@
     @foreach (var post in posts)
     {
         <div class="post">
-        @* <div class="container" id="posthead"> *@
-        @*     <div class="row border-bottom"> *@
-        @*         <div class="col-sm-auto"> *@
-        @*             <img src="/images/profilePhotos/@post.OwnerPhoto" alt="User" width="30px" height="30px" *@
-        @*                  class="profilePhoto"> *@
-        @*         </div> *@
-        @*         <div class="col-sm-auto"> *@
-        @*             <h3 class="username">@post.Owner</h3> *@
-        @*         </div> *@
-        @*     </div> *@
-        @* </div> *@
-        <div class="contents container">
+            <div class="contents container">
             @if (!String.IsNullOrEmpty(post.Text))
             {
                 <div class="container">
@@ -40,8 +29,10 @@
                     }
                 </div>    
             }
+            <hr/>
+            </div>
         </div>
-    </div>
+        
     }
     
     

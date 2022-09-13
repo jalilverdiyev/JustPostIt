@@ -1,5 +1,4 @@
 using JustPostItAPI.Models;
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JustPostItAPI.Controllers;
@@ -21,10 +20,20 @@ public class AuthenticationController : ControllerBase
     {
         return DbController.Authenticate(user);
     }
-   
+    
     [HttpPost("Register")]
-    public bool Register(User user)
+    public bool Register()
     {
+        User user = new User();
+        var postedData = HttpContext.Request.Form;
+        var username = postedData["Username"];
+        var email = postedData["Email"];
+        var password = postedData["Password"];
+        var photo = postedData.Files["ProfilePhoto"];
+        user.UserName = username;
+        user.Email = email;
+        user.Password = password;
+        user.ProfilePhoto = photo;
         return DbController.Add(user);
     }
    

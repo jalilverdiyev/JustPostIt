@@ -20,7 +20,7 @@ public static class DbController
         }
     }
 
-    private static readonly MySqlConnection Conn = new MySqlConnection(Configuration.GetConnectionString("local"));
+    private static readonly MySqlConnection Conn = new MySqlConnection(Configuration.GetConnectionString("JPIDatabase"));
 
     private static string HashPass(string input)
     {

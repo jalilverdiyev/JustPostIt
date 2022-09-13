@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "Hash": "RpcLoXhAOlJwdTkBuLxy4U90HCHoFUxaISf/YHXurVA=",
+  "Hash": "RVQL7bJ7QuSjYGe7j97QydGuiMfHR7t10CWQqBq1coA=",
   "Source": "JustPostItAPI",
   "BasePath": "_content/JustPostItAPI",
   "Mode": "Default",
-  "ManifestType": "Build",
+  "ManifestType": "Publish",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {

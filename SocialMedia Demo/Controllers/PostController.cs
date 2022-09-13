@@ -19,7 +19,7 @@ public class PostController : Controller
     
     public async Task<IActionResult> AllPosts()
     {
-        string requestUrl = $"https://localhost:7162/api/Post/GetAllPosts?id={_id}";
+        string requestUrl = $"https://justpostitapi.azurewebsites.net/api/Post/GetAllPosts?id={_id}";
         HttpClient client = new HttpClient(_handler);
         var response = await client.GetStringAsync(requestUrl);
         var posts = JsonConvert.DeserializeObject<List<Post>>(response);
@@ -29,7 +29,7 @@ public class PostController : Controller
 
     public async Task<IActionResult> FriendsPosts()
     {
-        string requestUrl = $"https://localhost:7162/api/Post/GetFriendsPosts?id={_id}";
+        string requestUrl = $"https://justpostitapi.azurewebsites.net/api/Post/GetFriendsPosts?id={_id}";
         HttpClient client = new HttpClient(_handler);
         var response = await client.GetStringAsync(requestUrl);
         var posts = JsonConvert.DeserializeObject<List<List<Post>>>(response);
@@ -39,7 +39,7 @@ public class PostController : Controller
 
     public async Task<IActionResult> SelfPosts()
     {
-        string requestUrl = $"https://localhost:7162/api/Post/GetSelfPosts?id={_id}";
+        string requestUrl = $"https://justpostitapi.azurewebsites.net/api/Post/GetSelfPosts?id={_id}";
         HttpClient client = new HttpClient(_handler);
         var response = await client.GetStringAsync(requestUrl);
         var posts = JsonConvert.DeserializeObject<List<Post>>(response);
@@ -65,7 +65,7 @@ public class PostController : Controller
     [HttpPost]
     public async Task<IActionResult> GetFriendPosts(int id)
     {
-        string requestUrl = $"https://localhost:7162/api/Post/GetFriendPosts?id={id}";
+        string requestUrl = $"https://justpostitapi.azurewebsites.net/api/Post/GetFriendPosts?id={id}";
         HttpClient client = new HttpClient(_handler);
         var response = await client.GetStringAsync(requestUrl);
         var posts = JsonConvert.DeserializeObject<List<Post>>(response);

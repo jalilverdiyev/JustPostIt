@@ -42,13 +42,16 @@ public class PostController : ControllerBase
         var text = httpPostedFile["Text"];
         post.Text = text;
         var orders = (string)httpPostedFile["Orders"];
-        post.Orders = orders.Split(',').Select(int.Parse).ToList();
-        List<IFormFile> list = new List<IFormFile>();
-        foreach (var file in httpPostedFile.Files)
+        if (!String.IsNullOrEmpty(orders))
         {
-            list.Add(file);
+            post.Orders = orders.Split(',').Select(int.Parse).ToList();
+            List<IFormFile> list = new List<IFormFile>();
+            foreach (var file in httpPostedFile.Files)
+            {
+                list.Add(file);
+            }
+            post.Photos = list;
         }
-        post.Photos = list;
         return DbController.Add(post);
     }
 
