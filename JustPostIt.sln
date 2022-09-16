@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMedia Demo", "SocialMedia Demo\SocialMedia Demo.csproj", "{85A4EB86-18CA-4243-8B8A-27568AA3242A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustPostIt", "JustPostIt\JustPostIt.csproj", "{85A4EB86-18CA-4243-8B8A-27568AA3242A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustPostItAPI", "JustPostItAPI\JustPostItAPI.csproj", "{F32AB539-2FDE-4A45-B978-00E693285D49}"
 EndProject
