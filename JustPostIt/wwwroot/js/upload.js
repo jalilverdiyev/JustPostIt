@@ -1,7 +1,7 @@
 // Special thanks to https://codepen.io/mahtab-alam for photo upload component
 
-let btnSubmit = document.getElementById('btnSubmit');
-btnSubmit.addEventListener('click',e =>{
+let formSubmit = document.getElementById('Register-form');
+formSubmit.addEventListener('submit',e =>{
     e.preventDefault();
     let image = document.getElementById('upload_file');
     let username = document.getElementById('username');
@@ -18,10 +18,28 @@ btnSubmit.addEventListener('click',e =>{
         data: formData,
         contentType:false,
         processData:false,
-        success:function(response){
-            if(response){
-                window.location.href = "https://justpostit.azurewebsites.net/login";
-            }
+    }).done(function(response){
+        console.log(response);
+        if(response){
+            window.location.href = "https://justpostit.azurewebsites.net/login";
+        }
+        else{
+            let popup = document.getElementById('popup');
+            popup.style.display = 'block';
+            let alert = document.createElement('div');
+            alert.classList.add('alert');
+            alert.classList.add('alert-danger');
+            alert.classList.add('d-flex');
+            alert.classList.add('flex-justify-between');
+            alert.innerText = "There is a user with this e-mail!";
+            let x = document.createElement('span');
+            x.innerText = 'X';
+            x.style.cursor = 'pointer';
+            x.addEventListener('click',function (){
+                document.getElementById('popup').style.display = 'none';
+            });
+            alert.appendChild(x);
+            popup.appendChild(alert);
         }
     })
 

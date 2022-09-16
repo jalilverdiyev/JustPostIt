@@ -953,11 +953,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/SocialMedia Demo.csproj",
-      "projectName": "SocialMedia Demo",
-      "projectPath": "/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/SocialMedia Demo.csproj",
+      "projectUniqueName": "/home/jverdiyev/RiderProjects/SocialMedia Demo/JustPostIt/JustPostIt.csproj",
+      "projectName": "JustPostIt",
+      "projectPath": "/home/jverdiyev/RiderProjects/SocialMedia Demo/JustPostIt/JustPostIt.csproj",
       "packagesPath": "/home/jverdiyev/.nuget/packages/",
-      "outputPath": "/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/obj/",
+      "outputPath": "/home/jverdiyev/RiderProjects/SocialMedia Demo/JustPostIt/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/jverdiyev/.nuget/NuGet/NuGet.Config"

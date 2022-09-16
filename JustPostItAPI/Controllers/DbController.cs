@@ -129,6 +129,40 @@ public static class DbController
         return friends;
     }
 
+    public static List<string> GetEmails()
+    {
+        List<string> emails = new List<string>();
+        try
+        {
+            if (Conn.State != ConnectionState.Open)
+            {
+                Conn.Open();
+            }
+
+            string query = "SELECT Email FROM Users";
+            MySqlCommand cmd = new MySqlCommand(query, Conn);
+            MySqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                emails.Add((string)dr[0]);
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+        finally
+        {
+            if (Conn.State != ConnectionState.Closed)
+            {
+                Conn.Close();
+            }   
+        }
+
+        return emails;
+    }
+    
     public static List<Person> GetFriendRequests(int id)
     {
         List<Person> friends = new List<Person>();
@@ -208,6 +242,10 @@ public static class DbController
     public static bool Add(User user)
     {
         int result = 0;
+        if (GetEmails().Count(x => x == user.Email) > 0)
+        {
+            return false;
+        }
         if (user.Password != null)
         {
             string hashed = HashPass(user.Password);
@@ -236,8 +274,14 @@ public static class DbController
             }
             catch (MySqlException e)
             {
-                Console.WriteLine(e);
-                throw;
+                if (e.Number == 1062) // Unique key exception
+                {
+                    return false;
+                }
+                else
+                {
+                    throw;
+                }
             }
             finally
             {
@@ -335,7 +379,7 @@ public static class DbController
                 $"INSERT INTO Posts(OwnerId,Text) VALUES({post.OwnerId},'{post.Text}'); SELECT last_insert_id()";
             MySqlCommand commandPost = new MySqlCommand(queryPost, Conn);
             post.Id = Convert.ToInt32(commandPost.ExecuteScalar());
-
+            result += post.Id != 0 ? 1 : 0;
             if (post.Photos != null)
             {
                 List<string> paths = FileManager.SaveFiles(post.Photos, ImageType.Post);

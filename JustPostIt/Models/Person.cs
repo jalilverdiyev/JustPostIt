@@ -1,4 +1,4 @@
-namespace SocialMedia_Demo.Models;
+namespace JustPostIt.Models;
 
 public enum PersonStatus
 {

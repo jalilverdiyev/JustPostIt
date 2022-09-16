@@ -27,7 +27,7 @@
                 </div>
                 <div class="modal-footer">
                     <button id="close-modal" type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="resetForm()">Close</button>
-                    <button id="send" class="btn btn-primary">Post</button>
+                    <button id="send" class="btn btn-primary" data-bs-dismis="modal">Post</button>
                 </div>
             </form>
         </div>
@@ -35,6 +35,8 @@
 </div>
 
 <script>
+
+
     let send = document.getElementById('send');
        send.addEventListener('click',e =>{
             e.preventDefault();
@@ -54,13 +56,57 @@
             type:'POST',
             data: formData,
             contentType:false,
-            processData:false,
-            success: function (response){
-                if(response){
-                    $('#exampleModal').modal('hide');
-                }
-            }    
-       });  
+            processData:false,    
+       }).done(function (response){
+           console.log(response); 
+           if(response){
+                document.getElementById('exampleModal').classList.remove('fade');
+                $('#exampleModal').modal('hide');
+                resetForm();
+                let info =  document.getElementById('info');
+                let alert = document.createElement('div');
+                 alert.classList.add('alert');
+                 alert.classList.add('alert-success');
+                 alert.classList.add('d-flex');
+                 alert.classList.add('justify-content-between');
+                let text =  document.createElement('p');
+                text.innerText = 'Posted successfully';
+                let x = document.createElement('span');
+                x.classList.add('hide-alert');
+                x.id = 'hide-alert';
+                x.innerText = 'X';
+                x.style.cursor = 'pointer';                
+                x.addEventListener('click',function (){
+                    document.getElementById('info').style.display = 'none';
+                })
+                alert.appendChild(text);
+                alert.appendChild(x);
+                info.appendChild(alert);
+           }else{
+                 document.getElementById('exampleModal').classList.remove('fade');
+                 $('#exampleModal').modal('hide');
+                 resetForm();
+                 let info =  document.getElementById('info');
+                 let alert = document.createElement('div');
+                 alert.classList.add('alert');
+                 alert.classList.add('alert-danger');
+                 alert.classList.add('d-flex');
+                 alert.classList.add('justify-content-between');
+                 let text =  document.createElement('p');
+                 text.innerText = 'There were some errors';
+                 let x = document.createElement('span');
+                 x.classList.add('hide-alert');
+                 x.id = 'hide-alert';
+                 x.innerText = 'X';
+                 x.style.cursor = 'pointer';
+                 x.addEventListener('click',function (){
+                    document.getElementById('info').style.display = 'none';
+                 })
+                 alert.appendChild(text);
+                 alert.appendChild(x);
+                 info.appendChild(alert);      
+           }
+        });  
     })
 
     function resetForm(){

@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustPostIt", "JustPostIt\Ju
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustPostItAPI", "JustPostItAPI\JustPostItAPI.csproj", "{F32AB539-2FDE-4A45-B978-00E693285D49}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustPostItDesktop", "JustPostItDesktop\JustPostItDesktop.csproj", "{B0E2A5B4-FA99-4CB6-ABB5-33CFCD7399FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{F32AB539-2FDE-4A45-B978-00E693285D49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F32AB539-2FDE-4A45-B978-00E693285D49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F32AB539-2FDE-4A45-B978-00E693285D49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0E2A5B4-FA99-4CB6-ABB5-33CFCD7399FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0E2A5B4-FA99-4CB6-ABB5-33CFCD7399FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0E2A5B4-FA99-4CB6-ABB5-33CFCD7399FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0E2A5B4-FA99-4CB6-ABB5-33CFCD7399FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

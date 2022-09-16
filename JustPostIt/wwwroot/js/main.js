@@ -88,5 +88,8 @@ function getFriendPosts(id,url){
 
 //Ui matters :)
 function hidealert(){
-	document.getElementById('popup').style.display = "none";
+	document.getElementById('popup').style.display = "none !important";
 }
+
+	
+

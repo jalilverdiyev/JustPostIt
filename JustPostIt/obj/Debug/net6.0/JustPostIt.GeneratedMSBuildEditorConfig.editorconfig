@@ -1,0 +1,80 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = JustPostIt
+build_property.RootNamespace = JustPostIt
+build_property.ProjectDir = /home/jverdiyev/RiderProjects/SocialMedia Demo/JustPostIt/
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /home/jverdiyev/RiderProjects/SocialMedia Demo/JustPostIt
+build_property._RazorSourceGeneratorDebug = 
+
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/JustPostIt/Views/Authentication/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aGVudGljYXRpb24vTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/JustPostIt/Views/Authentication/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aGVudGljYXRpb24vUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/JustPostIt/Views/Authentication/Test.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aGVudGljYXRpb24vVGVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/JustPostIt/Views/Person/AddFriend.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGVyc29uL0FkZEZyaWVuZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/JustPostIt/Views/Person/FriendRequests.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGVyc29uL0ZyaWVuZFJlcXVlc3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/JustPostIt/Views/Person/Friends.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGVyc29uL0ZyaWVuZHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/JustPostIt/Views/Person/People.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGVyc29uL1Blb3BsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/JustPostIt/Views/Person/UpdateFriend.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGVyc29uL1VwZGF0ZUZyaWVuZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/JustPostIt/Views/Post/AllPosts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdC9BbGxQb3N0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/JustPostIt/Views/Post/FriendsPosts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdC9GcmllbmRzUG9zdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/JustPostIt/Views/Post/GetFriendPosts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdC9HZXRGcmllbmRQb3N0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/JustPostIt/Views/Post/Partials/_NewPostPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdC9QYXJ0aWFscy9fTmV3UG9zdFBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/JustPostIt/Views/Post/SelfPosts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdC9TZWxmUG9zdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/JustPostIt/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/JustPostIt/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jverdiyev/RiderProjects/SocialMedia Demo/JustPostIt/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

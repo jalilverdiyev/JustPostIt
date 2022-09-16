@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4HTXyZgjE5CFw/cbOQAjY/KnvFT9jmp+KKgbCEEweJo88o17xUe9SKKlf9Vf/m+nP8e8k2E3EenGto3i6Dn61w==",
+  "dgSpecHash": "YcJCkWZoYqdA4Lr5EU+2WWlvXOblzPOOjNtFNFsTyJ3fi9BOiy/4nxHUwUFIA+62Mu3V5fvCf457q0cBhN2bWQ==",
   "success": true,
-  "projectFilePath": "/home/jverdiyev/RiderProjects/SocialMedia Demo/SocialMedia Demo/SocialMedia Demo.csproj",
+  "projectFilePath": "/home/jverdiyev/RiderProjects/SocialMedia Demo/JustPostIt/JustPostIt.csproj",
   "expectedPackageFiles": [
     "/home/jverdiyev/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/home/jverdiyev/.nuget/packages/google.protobuf/3.19.4/google.protobuf.3.19.4.nupkg.sha512",

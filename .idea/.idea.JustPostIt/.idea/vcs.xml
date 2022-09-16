@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/JustPostIt" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/JustPostItAPI" vcs="Git" />
   </component>
 </project>

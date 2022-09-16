@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using SocialMedia_Demo.Models;
+using JustPostIt.Models;
 
-namespace SocialMedia_Demo.Controllers;
+namespace JustPostIt.Controllers;
 
 [Authorize]
 public class PersonController : Controller
