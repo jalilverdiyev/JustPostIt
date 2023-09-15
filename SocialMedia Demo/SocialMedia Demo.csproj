@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace>SocialMedia_Demo</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+      <PackageReference Include="MySql.Data" Version="8.0.30" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+      <PackageReference Include="RestSharp" Version="108.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="wwwroot\images" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\images\profilePhotos\3d5e8e64-bafc-430c-abae-a870d99e22b9.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\profilePhotos\519471ee-2c3e-4207-823a-541841bd8e06.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\profilePhotos\9e72fb06-b3b7-42bd-9cdc-2dceb733cd98.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\profilePhotos\b42f4e14-5c60-4c0c-95ed-7bb1fc017609.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\profilePhotos\default.png" />
+    </ItemGroup>
+
+</Project>

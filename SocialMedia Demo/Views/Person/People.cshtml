@@ -1,0 +1,47 @@
+@{
+    Layout = "_Layout";
+}
+@{
+    var people = ViewBag.people;
+    var photoUrl = "https://localhost:7162/api";
+}
+
+<div class="container">
+    <div class="popup" id="popup"></div>
+    <div class="d-flex flex-row flex-wrap" style="margin-top: 30px;">
+        @{
+            int counter = 1;
+            foreach (var person in people)
+            {
+                <div class="person p-2 border d-flex flex-row">
+                    <div class="container d-flex flex-row">
+                        <img class="profilePhoto" id="@person.PersonId" src="@photoUrl/images/profilePhotos/@person.Profile_Photo" width="35px" height="35px" alt="">
+                        <h4 id="userName">@person.Name</h4>
+                    </div>
+                    @switch (person.Status)
+                    {
+                        case PersonStatus.None:
+                            <button class="btn btn-primary mt-auto" onclick="addFriend(@person.PersonId,'@person.Name','@Url.Action("AddFriend")')">Add</button>
+                            break;
+                        case PersonStatus.Pending:
+                            <p>Request Sent</p>        
+                            break;
+                        case PersonStatus.Accepted:
+                            <p>✅ You are friends</p>
+                            break;
+                        case PersonStatus.Rejected:
+                            <p>😞 Rejected ...</p>
+                            break;
+                        default:
+                            throw new ArgumentOutOfRangeException();
+                    }
+                </div>
+                if (counter % 4 == 0)
+                {
+                    <div class="w-100 breaker"></div>
+                }
+                counter++;
+            }
+        }
+    </div>
+</div>

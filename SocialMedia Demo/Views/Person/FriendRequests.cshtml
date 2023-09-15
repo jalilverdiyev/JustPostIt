@@ -1,0 +1,31 @@
+@{
+    Layout = "_Layout";
+}
+@{
+    var requests = ViewBag.requests;
+    var photoUrl = "https://locahost:7162/api";
+}
+
+<div class="container">
+<div class="popup" id="popup"></div>
+    <div class="container d-flex flex-row flex-wrap cont">
+        @foreach (var request in requests)
+        {
+            <div class=" d-flex justify-content-center align-items-center conta">
+                <div class="card">
+                    <div class="user text-center">
+                        <div class="profile mt-3">
+                            <img alt="" src="@photoUrl/images/profilePhotos/@request.Profile_Photo" class="rounded-circle" width="80">
+                        </div>
+                    </div>
+                    <div class="mt-5 text-center">
+                        <h4 class="mb-0">@request.Name</h4>
+                        <button class="btn btn-primary btn-sm p-2" onclick="updateFriend(@request.PersonId,'@request.Name','@Url.Action("UpdateFriend")','accept')">Accept</button>
+                        <button class="btn btn-danger btn-sm p-2" onclick="updateFriend(@request.PersonId,'@request.Name','@Url.Action("UpdateFriend")','reject')">Reject</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+</div>

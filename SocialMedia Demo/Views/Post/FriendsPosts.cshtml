@@ -1,0 +1,53 @@
+@{
+    Layout = "_Layout";
+}
+@{
+    List<List<Post>> postLists = ViewBag.posts;
+    var photoUrl = "https://localhost:7162/api";
+}
+
+<div class="posts">
+    @foreach (var list in postLists)
+    {
+        bool isOnce = true;
+        foreach (var post in list)
+        {
+            if (isOnce)
+            {
+                <div class="container" id="posthead">
+                    <div class="row border-bottom">
+                        <div class="col-sm-auto">
+                            <img src="@photoUrl/images/profilePhotos/@post.OwnerPhoto" alt="User" width="30px" height="30px"
+                                 class="profilePhoto">
+                        </div>
+                        <div class="col-sm-auto">
+                            <h2 class="username">@post.Owner</h2>
+                        </div>
+                    </div>
+                </div>
+                isOnce = false;
+            }
+            <div class="post">
+                <div class="contents container">
+                    @if (post.Text != null)
+                    {
+                        <div class="container">
+                            <p class="text">@post.Text</p>
+                        </div>    
+                    }
+                    <div class="images d-flex justify-content-center flex-wrap">
+                     @if (post.Paths != null)
+                     {
+                         foreach (var path in post.Paths)
+                         {
+                             <img src="@photoUrl/images/postPhotos/@path" alt="Image 1" class="image">
+                         }
+                     }
+                    </div>
+                    <hr/>
+                </div>
+            </div>
+        }
+    }
+
+</div>

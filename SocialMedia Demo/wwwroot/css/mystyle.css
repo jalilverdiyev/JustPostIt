@@ -1,0 +1,84 @@
+/*Layout styles*/
+.profilePhoto {
+    margin-top: 2px;
+}
+
+.image {
+    width: 250px;
+    height: 250px;
+    margin-left: 15px;
+}
+
+.post {
+    margin-top: 45px;
+}
+
+.post:last-child {
+    margin-bottom: 60px;
+}
+
+.person {
+    width: 250px; 
+    height: 100px;
+    display: flex;
+    align-items: start;
+    justify-content: left;
+    margin-left: 5px;
+}
+
+.friend{
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+
+.breaker{
+    margin-top: 10px;
+}
+
+#userName {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.friend_list {
+    overflow: scroll;
+    position: fixed;
+    top: 9%;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+}
+
+.contentpage {
+    width: 80%;
+    height: 100%;
+    position: fixed;
+    top: 7%;
+    left: 15%;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    word-wrap: unset;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    padding: 8px;
+    background-color: #fff;
+    position: relative;
+}
+
+.conta {
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.cont {
+    margin-left: 20px;
+}

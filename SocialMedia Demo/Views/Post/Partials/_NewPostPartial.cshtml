@@ -1,0 +1,124 @@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using System.Security.Claims
+@model Post
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New Post</h5>
+            </div>
+            <form enctype="multipart/form-data" id="post-form" method="POST">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">Post text:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input id="photos" type="file" multiple="multiple"/>
+                    </div>
+                    <div class="d-flex form-group">
+                        <div id="output" class="list-group d-flex flex-row"></div>
+                    </div>
+                    <div class="form-group">
+                        <input id="orders" type="text" hidden="hidden"/>
+                        <input id="id" type="text" hidden="hidden" value="@User.Claims.First(c => c.Type == ClaimTypes.NameIdentifier).Value"/>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="close-modal" type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="resetForm()">Close</button>
+                    <button id="send" class="btn btn-primary">Post</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    let send = document.getElementById('send');
+       send.addEventListener('click',e =>{
+            e.preventDefault();
+            let files = document.getElementById('photos').files;
+            let text= document.getElementById('message-text').value;
+            let orders = document.getElementById('orders').value;
+            let id = document.getElementById('id').value;  
+            const formData = new FormData();
+            formData.append("Text",text);
+            formData.append("Orders",orders);
+            formData.append("Id",id);
+            for (const file of files){
+                formData.append("Photos",file);    
+            }
+            $.ajax({
+            url:"https://localhost:7162/api/Post/AddNewPost",
+            type:'POST',
+            data: formData,
+            contentType:false,
+            processData:false,
+            success: function (response){
+                if(response){
+                    $('#exampleModal').modal('hide');
+                }
+            }    
+       });  
+    })
+
+    function resetForm(){
+        document.getElementById('post-form').reset();
+        let out = document.getElementById('output');
+        let child = out.lastElementChild;
+        while(child){
+            out.removeChild(child);
+            child = out.lastElementChild;
+        }
+    }
+    
+    const input = document.getElementById('photos');
+    input.addEventListener('change',function(event) 
+    {
+        for(let i = 0; i < event.target.files.length; i++){
+            let out = document.getElementById('output');
+            let div = document.createElement('div');
+            div.classList.add("list-group-item");
+            div.classList.add("handle");
+            div.id = i.toString();
+            let img = document.createElement('img');
+            img.src = URL.createObjectURL(event.target.files[i]);
+            img.width = 60;
+            img.height = 60;
+            div.appendChild(img);
+            out.appendChild(div);
+        }
+        let orders = document.getElementById('orders');
+        let arr = [];
+        for (let i = 0; i < sortable.el.childNodes.length; i++){
+            arr.push(sortable.el.childNodes[i].id);
+        }
+        console.log(arr);
+        orders.setAttribute("value",arr.toString());
+    },false);
+
+    let player = document.getElementById("output");
+    
+    var sortable = new Sortable.create(player,{
+        handle: '.handle',
+        animation:200,
+        dropBubble:true
+    })
+    
+    let out = document.getElementById('output');
+    out.addEventListener('dragend',function (){
+        let orders = document.getElementById('orders');
+        let arr = [];
+        for (let i = 0; i < sortable.el.childNodes.length; i++){
+            arr.push(sortable.el.childNodes[i].id);
+        }
+        console.log(arr);
+        orders.setAttribute("value",arr.toString());
+    })
+
+
+   
+
+    
+</script>
